@@ -62,7 +62,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-16 left-4 right-4 bg-black/80 text-white rounded-lg p-4 z-40 md:hidden"
+                        className="absolute top-16 left-4 right-4 bg-black/70 text-white rounded-lg p-4 z-40 md:hidden"
                     >
                         <div className="flex flex-col space-y-4">
                             {tabs.map(tab => {
