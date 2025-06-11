@@ -24,3 +24,63 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.glitter {
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #ffd700 20%,
+    #fff 40%,
+    #ffd700 60%,
+    #fff 80%,
+    #ffd700 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2s linear infinite;
+  position: relative;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes flame {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 94, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 150, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 94, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
+  }
+}
+
+.flaming-button {
+  animation: flame 1.5s infinite ease-in-out;
+}
+
+@keyframes textFlame {
+  0% {
+    text-shadow: 0 0 5px #ff7300, 0 0 10px #ff7300, 0 0 15px #ff0000;
+    color: #fff5e6;
+  }
+  50% {
+    text-shadow: 0 0 10px #ffa600, 0 0 20px #ff4500, 0 0 25px #ff0000;
+    color: #ffe0b3;
+  }
+  100% {
+    text-shadow: 0 0 5px #ff7300, 0 0 10px #ff7300, 0 0 15px #ff0000;
+    color: #fff5e6;
+  }
+}
+
+.flaming-text {
+  animation: textFlame 1.8s infinite ease-in-out;
+}
