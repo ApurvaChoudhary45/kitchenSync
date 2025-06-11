@@ -8,7 +8,7 @@ import { signOut } from "next-auth/react"
 import { useRouter } from 'next/navigation'
 import Footer from '@/components/Footer'
 import { Menu, X } from 'lucide-react';
-const page = () => {
+const Page = () => {
     const pathname = usePathname();
     const tabs = ['Home', 'Menu', 'History', 'Cart']
     const [carting, setcarting] = useState([])
@@ -166,4 +166,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

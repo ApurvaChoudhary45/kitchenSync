@@ -11,7 +11,7 @@ import { searched } from '@/Redux/Search/search'
 import { useState } from 'react'
 import Footer from '@/components/Footer'
 import { Menu, X } from 'lucide-react';
-const page = () => {
+const Page = () => {
     const dispatch = useDispatch()
     const [seached, setseached] = useState('')
     const pathname = usePathname();
@@ -129,4 +129,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

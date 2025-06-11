@@ -5,7 +5,7 @@ import MenuItemCard from '@/components/MenuItemCard'
 import Navbar from '@/components/Navbar'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <div>
       <Navbar/>
@@ -15,4 +15,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
