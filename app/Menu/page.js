@@ -18,6 +18,22 @@ const Page = () => {
     const tabs = ['Home', 'Menu', 'History', 'Cart']
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+    const handleSearch = (func, delay)=>{
+        let timeoutId;
+        return function(...args){
+            clearTimeout(timeoutId)
+            timeoutId = setTimeout(() => {
+                func.apply(this, args)
+            }, delay);
+        }
+    }
+
+    const searchInput = (value)=>{
+        console.log('Searching for:' , value)
+    }
+    const searchHandler = handleSearch(searchInput, 500)
+
+
     const searchfood = () => {
         dispatch(searched(seached))
     }
@@ -110,7 +126,9 @@ const Page = () => {
                             placeholder="Search for delicious dishes..."
                             className="flex-grow outline-none text-gray-700 placeholder-green-500 bg-transparent relative"
                             value={seached}
-                            onChange={(e) => setseached(e.target.value)}
+                            onChange={(e) => {setseached(e.target.value);
+                                searchHandler(e.target.value)
+                            }}
                         />
                         <button className="mt-2 sm:mt-0 sm:ml-3 bg-black text-white px-4 py-2 rounded-full cursor-pointer hover:text-green-300 transition relative" onClick={searchfood}>
                             Search
