@@ -135,7 +135,7 @@ const Page = () => {
                             </motion.div>
                         )}
                     </AnimatePresence>
-                    <div className="grid grid-cols-1 gap-5 py-10 px-5">
+                    <div className="grid grid-cols-1 gap-5 py-10 px-5 mt-15">
                         {Array.isArray(carting) && carting.length > 0 && carting.map(item => (
                             <motion.div className="bg-white shadow-lg rounded-xl overflow-hidden w-full md:w-[60%] mx-auto my-5" key={item._id} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} transition={{ duration: 0.5 }}>
                                 <img
